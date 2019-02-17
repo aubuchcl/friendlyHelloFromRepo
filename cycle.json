@@ -1,0 +1,43 @@
+{
+  "version": "1.0",
+  "about": null,
+  "tests": [],
+  "services": {
+    "loadbalancer": null,
+    "vpn": null
+  },
+  "containers": {
+    "alpine": {
+      "name": "alpine",
+      "image": {
+        "name": "alpine:latest",
+        "source": {
+          "repo": {
+            "dir": "/",
+            "build_file": "/Dockerfile",
+            "url": "https://github.com/aubuchcl/friendlyHelloFromRepo.git"
+          }
+        }
+      },
+      "config": {
+        "network": {
+          "public": "disable",
+          "hostname": "alpine",
+          "ports": []
+        },
+        "deploy": {
+          "instances": 1,
+          "constraints": null,
+          "shutdown": null,
+          "restart": null,
+          "health_check": null
+        },
+        "scaling": null,
+        "runtime": null,
+        "resources": null,
+        "integrations": null
+      }
+    }
+  },
+  "annotations": {}
+}
