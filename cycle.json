@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "about": null,
+  "tests": [],
+  "services": {
+    "loadbalancer": null,
+    "vpn": null
+  },
+  "containers": {
+    "hello": {
+      "name": "hello",
+      "image": {
+        "name": "aubuchcl/friendlyhello",
+        "source": {
+          "docker_hub": {
+            "target": "aubuchcl/friendlyhello:latest",
+            "username": ""
+          }
+        }
+      },
+      "config": {
+        "network": {
+          "public": "disable",
+          "hostname": "hello",
+          "ports": []
+        },
+        "deploy": {
+          "instances": 1,
+          "constraints": null,
+          "shutdown": null,
+          "restart": null,
+          "health_check": null
+        },
+        "scaling": null,
+        "runtime": null,
+        "resources": null,
+        "integrations": null
+      }
+    }
+  },
+  "annotations": {}
+}
